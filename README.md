@@ -13,7 +13,7 @@ To report a bug, click the link below. We've created a template that you can use
 
 [Report a Bug](https://github.com/knackio/issues/issues/new?assignees=leroyjware&labels=bug&template=bug-report.md&title=%5BBUG%5D)
 
-## Suggesting Features
+## Requesting Features
 
 We're always open to new feature suggestions -- especially from other engineers and designers! To suggest a new feature, click the link below and use the Feature Request template to share your idea.
 
