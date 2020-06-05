@@ -23,10 +23,10 @@ We're always open to new feature suggestions -- especially from other engineers 
 
 We're working hard to open-source a number of awesome coding patterns that we've developed and we'd love to get as many people involved as possible. Our main areas of focus are:
 
-* **Next.js + Serverless Components**
-* **AWS CDK with Typescript**
-* **The Serverless Framework**
-* **React.js + Serverless GraphQL**
-* **React Native/Expo + Serverless GraphQL**
+* Next.js + Serverless Components
+* AWS CDK with Typescript
+* The Serverless Framework
+* React.js + Serverless GraphQL
+* React Native/Expo + Serverless GraphQL
 
 The more we all share with each other, the more successful we can all be. If you're interested in contributing to our open-source projects, email us at [dev@knack.io](mailto:dev@knack.io) or join our [Telegram Community](https://t.me/knackio).
