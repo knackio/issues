@@ -1,0 +1,30 @@
+name: Notification
+
+on:
+  issues:
+    types: [opened, edited, deleted, closed]
+  issue_comment:
+    types: [created, edited, deleted]
+
+jobs:
+  notify:
+    name: notify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue Notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: Issue
+          text: An issue was opened, edited, deleted, or closed.
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Comment Notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: Comment
+          fields: repo,author,message,eventName
+          text: A comment was opened, edited, or deleted.
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
