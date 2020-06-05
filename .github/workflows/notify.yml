@@ -11,14 +11,20 @@ jobs:
     name: notify
     runs-on: ubuntu-latest
     steps:
+
+      # Issue
       - name: Issue Notification
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
           author_name: Issue
+          fields: repo,author,message,eventName
           text: An issue was opened, edited, deleted, or closed.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: github.event_name == 'issues'
+
+      # Comment
       - name: Comment Notification
         uses: 8398a7/action-slack@v3
         with:
@@ -28,3 +34,4 @@ jobs:
           text: A comment was opened, edited, or deleted.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: github.event_name == 'issue_comment'
